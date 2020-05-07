@@ -56,12 +56,6 @@ const renderAd = (selector, requiredType) => {
     return;
   }
 
-  // 檢查 adInfo 直到有值
-  if (!adInfo) {
-    setTimeout(() => renderAd(selector, requiredType), 100);
-    return;
-  }
-
   const {
     url,
     type,
