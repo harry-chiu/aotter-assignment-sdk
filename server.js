@@ -27,6 +27,7 @@ const cors = (req, res, next) => {
 };
 
 app.use(cors);
+app.use(express.json());
 
 //api endpoint
 app.get('/ads', (req, res) => {
@@ -34,7 +35,13 @@ app.get('/ads', (req, res) => {
    * type: requested ad type
    */
   const { type = '' } = req.query;
+
   res.send(getAd(type.toUpperCase()));
+});
+
+app.post('/log', (req, res) => {
+  console.log('error from client: ', req.body);
+  res.send({ isLog: true });
 });
 
 app.listen(PORT, () => {
