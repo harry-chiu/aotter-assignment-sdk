@@ -29,11 +29,13 @@ node server.js
 
 接著在 `html` 加入放置廣告的容器
 ```javascript
+...
 <!-- 您要放置廣告容器 -->
 <div id="my-ad"></div>
 
 <!-- sdk.js -->
 <script src="./sdk.js"></script>
+...
 ```
 
 ### JavaScript
