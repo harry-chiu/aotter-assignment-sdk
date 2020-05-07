@@ -109,6 +109,26 @@ body {
   padding: 12px;
 }
 
+/*
+ *  Clear Cache
+ */
+
+ #clear-cache {
+   position: fixed;
+   right: 16px;
+   bottom: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   background: #5dc3c5;
+   color: #ffffff;
+   cursor: pointer;
+   font-size: 14px;
+ }
+
 @media screen and (max-width: 768px) {
   /*
    *  Navigation Bar

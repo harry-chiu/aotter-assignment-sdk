@@ -181,6 +181,7 @@ const renderAd = (selector, requiredType) => {
             // 如果 memorizedUrl 不是陣列 或 為空陣列
             // 將 impression_url 存入 memorizedUrl
             if (!Array.isArray(memorizedUrl) || !memorizedUrl.length) {
+              console.log(`觸發呼叫 impression_url: ${impression_url}`);
               localStorage.setItem('memorizedUrl', JSON.stringify([impression_url]));
             }
 
@@ -194,8 +195,8 @@ const renderAd = (selector, requiredType) => {
                 //   .then(response => response.json)
                 //   .then(json => console.log(json))
                 //   .catch(error => console.log(error));
-
                 console.log(`觸發呼叫 impression_url: ${impression_url}`);
+                localStorage.setItem('memorizedUrl', JSON.stringify([...memorizedUrl, impression_url]));
               } else {
                 console.log(`${impression_url} 已經呼叫過 1 次`);
               }
